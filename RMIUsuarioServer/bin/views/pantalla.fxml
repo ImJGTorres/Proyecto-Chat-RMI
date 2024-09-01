@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="581.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.pantallaController">
+   <children>
+      <TabPane fx:id="tabPanePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="690.0" styleClass="body" stylesheets="@style.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabBienvenida" closable="false" styleClass="tabP">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="230.0" layoutY="136.0" text="Inicia Sesión" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="37.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="288.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@chat-bot.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="147.0" layoutY="340.0" text="Elige el chat al que te vas a dirigir" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="cmdAbrirChatPrivado" alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="413.0" mnemonicParsing="false" onAction="#irAChatPrivado" prefHeight="62.0" prefWidth="213.0" text="Chat personal" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cmdAbrirChatGrupal" alignment="CENTER" layoutX="359.0" layoutY="413.0" mnemonicParsing="false" onAction="#irAChatGrupal" prefHeight="62.0" prefWidth="213.0" text="Chat Grupal" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="txtIngresarUsuario" alignment="CENTER" layoutX="213.0" layoutY="234.0" prefHeight="60.0" prefWidth="343.0" promptText="ingresa tu usuario" styleClass="txt">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="73.0" fitWidth="85.0" layoutX="131.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@avatar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@iniciarsesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+          <Tab fx:id="tabChatPrivado" closable="false" styleClass="tabP">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="56.0" layoutY="404.0" text="Mensaje" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtMensajePrivado" layoutX="149.0" layoutY="397.0" prefHeight="42.0" prefWidth="332.0" styleClass="txt">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="txtUsuarioPrivado" editable="false" layoutX="500.0" layoutY="7.0" prefHeight="36.0" prefWidth="175.0" styleClass="txt">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="cmdEnviarMensajePrivado" alignment="CENTER" layoutX="503.0" layoutY="396.0" mnemonicParsing="false" onAction="#enviarMensajePrivado" prefHeight="32.0" prefWidth="98.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@enviar%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="cmdCerrarSesion" alignment="CENTER" layoutX="250.0" layoutY="458.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="48.0" prefWidth="189.0" text="Cerrar Sesión">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <TabPane fx:id="tabPaneChats" layoutY="57.0" prefHeight="325.0" prefWidth="690.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" />
+                        <ImageView fitHeight="42.0" fitWidth="47.0" layoutX="450.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@avatar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@privado.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab fx:id="tabChatGrupal" closable="false" styleClass="tabP">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtUsuarioGrupal" editable="false" layoutX="500.0" layoutY="7.0" prefHeight="36.0" prefWidth="175.0" styleClass="txt">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtMensajeGrupal" layoutX="149.0" layoutY="397.0" prefHeight="42.0" prefWidth="332.0" styleClass="txt">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="56.0" layoutY="399.0" prefHeight="39.0" prefWidth="94.0" text="Mensaje" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="cmdEnviarMensajeGrupal" alignment="CENTER" layoutX="503.0" layoutY="396.0" mnemonicParsing="false" onAction="#enviarMensajeGrupal" prefHeight="32.0" prefWidth="98.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@enviar%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="cmdCerrarSesion" alignment="CENTER" layoutX="250.0" layoutY="458.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="48.0" prefWidth="189.0" text="Cerrar Sesión">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="lvChatGrupal" layoutX="15.0" layoutY="54.0" prefHeight="316.0" prefWidth="660.0" />
+                        <ImageView fitHeight="42.0" fitWidth="47.0" layoutX="450.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@avatar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@grupo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="772.0" styleClass="body" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="26.0" layoutY="18.0" text="Usuario" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+      <TextField layoutX="107.0" layoutY="12.0" prefHeight="37.0" prefWidth="215.0" styleClass="txt">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button alignment="CENTER" layoutX="362.0" layoutY="12.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Conectar">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="574.0" layoutY="12.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Desconectar">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TabPane layoutX="19.0" layoutY="65.0" prefHeight="321.0" prefWidth="737.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Chat Grupal">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea layoutY="2.0" prefHeight="302.0" prefWidth="737.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Chat con ...">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea layoutX="6.0" layoutY="5.0" prefHeight="302.0" prefWidth="737.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TextField layoutX="13.0" layoutY="409.0" prefHeight="37.0" prefWidth="276.0" styleClass="txt" />
+      <Button alignment="CENTER" layoutX="299.0" layoutY="409.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="79.0" text="Enviar">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="616.0" layoutY="410.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="113.0" text="Chatear">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ComboBox layoutX="449.0" layoutY="410.0" prefHeight="37.0" prefWidth="150.0" styleClass="txt" />
+   </children>
+</AnchorPane>
